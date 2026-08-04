@@ -6,7 +6,7 @@ const BUS_ALERTS =
 const RAIL_ALERTS =
   "https://5cgdcfl7csnoiymgfhjp5bqgii0yxifx.lambda-url.us-west-1.on.aws/";
 
-const SHOW_CX_SURVEY_POPUP = true;
+const SHOW_CX_SURVEY_POPUP = false;
 
 // not used
 // const DATA_SOURCE_PROD = 'https://pveqxgqnqpmamg2lfxgv4akoau0rabtm.lambda-url.us-west-1.on.aws/';
