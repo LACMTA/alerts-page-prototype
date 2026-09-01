@@ -1,68 +1,14 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QBDD28NZW"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=https://go.metro.net/alerts" />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href="https://go.metro.net/alerts">Metro Service Alerts</a>…</p>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-5QBDD28NZW');
+      window.location.replace("https://go.metro.net/alerts");
     </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- import stylesheet -->
-    <link rel="stylesheet" href="https://use.typekit.net/goe1fni.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/uswds/css/styles.css">
-    <link href="designSystem.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    
-    <title>Metro | Alerts Status</title>
-    
-    <style>
-        #timestamp, #now {
-            font-weight: bold;
-        }
-    </style>
-
-</head>
-
-<body>
-    <div id="status" style="margin: 50px;">
-        <h1>Alerts Status</h1>
-
-        <p>
-            Alerts feed timestamp: <span id="timestamp"></span>
-        </p>
-        <p>
-            Current time: <span id="now"></span>
-        </p>
-        
-    </div>
-
-<script>
-    const DATA_SOURCE = 'https://pveqxgqnqpmamg2lfxgv4akoau0rabtm.lambda-url.us-west-1.on.aws/';
-    fetch(DATA_SOURCE)
-        .then(response => response.json())
-        .then(data => {
-            let result = new Intl.DateTimeFormat('en-US', {
-                dateStyle: 'short',
-                timeStyle: 'long'
-            }).format(data.header.timestamp * 1000);
-
-            document.getElementById('timestamp').textContent = result;
-            document.getElementById('now').textContent = new Date().toLocaleString();
-        });
-
-</script>
-</body>
-
+  </body>
 </html>
